@@ -1,0 +1,29 @@
+{
+    "configurations": [
+        {
+            "type": "gradle",
+            "name": "[jvm] test",
+            "tasks": ["jvmTest"],
+        },
+        {
+            "type": "gradle",
+            "name": "clean",
+            "tasks": ["clean"],
+        },
+        {
+            "type": "gradle",
+            "name": "[js] test",
+            "tasks": ["jsTest"]
+        },
+        {
+            "type": "gradle",
+            "name": "[all] test on save",
+            "tasks": ["-t", "allTests"]
+        },
+        {
+            "type": "gradle",
+            "name": "[all] test",
+            "tasks": ["allTests"]
+        } 
+    ]
+}

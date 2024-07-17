@@ -1,0 +1,27 @@
+[versions]
+agp = "8.0.2"
+kotlin = "1.9.23"
+nexus-publish = "2.0.0-rc-1"
+android-minSdk = "26"
+android-compileSdk = "33"
+complete-kotlin = "1.1.0"
+kotest = "5.8.1"
+test-logger = "4.0.0"
+coroutines = "1.7.1"
+
+[libraries]
+kotlin-test = { module = "org.jetbrains.kotlin:kotlin-test", version.ref = "kotlin" }
+nexus-publish = { module = "io.github.gradle-nexus.publish-plugin:io.github.gradle-nexus.publish-plugin.gradle.plugin", version.ref = "nexus-publish" }
+kotest-framework-engine = { module = "io.kotest:kotest-framework-engine", version.ref = "kotest" }
+kotest-runner-junit5 = { module = "io.kotest:kotest-runner-junit5", version.ref = "kotest" }
+kotest-assertions-core = { module = "io.kotest:kotest-assertions-core", version.ref = "kotest" }
+kotest-framework-datatest = { module = "io.kotest:kotest-framework-datatest", version.ref = "kotest" }
+kotlinx-coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "coroutines" }
+
+[plugins]
+androidLibrary = { id = "com.android.library", version.ref = "agp" }
+kotlinMultiplatform = { id = "org.jetbrains.kotlin.multiplatform", version.ref = "kotlin" }
+complete-kotlin = { id = "com.louiscad.complete-kotlin", version.ref = "complete-kotlin" }
+kotestMultiplatform = { id = "io.kotest.multiplatform", version.ref = "kotest" }
+testLogger = { id = "com.adarshr.test-logger", version.ref = "test-logger" }
+kotlinNativeCocoapods = { id = "org.jetbrains.kotlin.native.cocoapods", version.ref = "kotlin" }
